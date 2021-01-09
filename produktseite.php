@@ -58,7 +58,7 @@
                 </button>
               </a>
           </div>
-          <!--QUITTUNG QUITTUNG QUITTUNG-->
+          <!--QUITTUNG QUITTUNG QUITTUNG
           <div class="quittungbox">
             <a href="<?php $product['quittung']; ?>">
             <p>Quittung ansehen</p>
@@ -66,7 +66,7 @@
                 <i class="fas fa-arrow-circle-right fa-2x"></i>
               </button>
             </a>
-          </div>
+          </div>-->
 
           <!--glöckli wird nur angezeigt, wenn der push aktiv ist-->
           <?php
@@ -85,10 +85,10 @@
         foreach ($push_products as $push_prod) {
           $push_prod_id = $push_prod['id'];
                 if($push_prod_id == $product_id){?>
+                  <button class="löschenalert" type="submit" name="verkaufen_submit" value="" onclick="window.location.href='/produktAbfrage.php?product_id=<?php echo $product['id'] ?>'">Nö, besser verkaufen!</button>
                   <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                     <div class"buttonalert">
                       <input type="hidden" name="product_id" value="<?php echo $product[id]; ?>">
-                      <button class="löschenalert" type="submit" name="verkaufen_submit" value="">Nö, besser verkaufen!</button>
                       <button class="artikelbehalten" type="submit" name="behalten_submit" value="">Artikel behalten!</button>
                     </div>
                   </form>

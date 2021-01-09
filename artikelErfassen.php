@@ -67,6 +67,13 @@
       $product_valid = false;
     }
 
+    if(!empty($_POST['price'])){
+      $price = $_POST['price'];
+    }else{
+      $msg .= "Bitte gib ein Preis ein.<br>";
+      $product_valid = false;
+    }
+
     if(!empty($_POST['description'])){
       $description = $_POST['description'];
     }else{
@@ -90,7 +97,7 @@
           }
           move_uploaded_file($_FILES[$inputname]['tmp_name'], $new_path);
 
-        $result = product_input($dateiname, $product_name, $purchase_date, $description, $purchase_date, $user_id);
+        $result = product_input($dateiname, $product_name, $purchase_date, $price, $description, $purchase_date, $user_id);
 
         if($result){
           unset($_POST);
@@ -116,57 +123,18 @@
         <?php if(!empty($msg)){ ?>
         <div class="nachricht" role="alert">
           <p><?php echo $msg ?></p>
-
-
-    <?php } ?>
+        <?php } ?>
         <input type="file" name="bildfile" class="file" id="file"><br><br>
-          <label for="product_name">Produktbezeichnung</label><br>
-          <input type="text" name="product_name" value="" class="product_name"><br>
-          <label for="purchase_date">Gekauft am</label><br>
-          <input type="date" name="purchase_date" value="" class="purchase_date"><br>
-          <label for="description">Beschreibung</label><br>
-          <input type="text" name="description" value="" class="description"><br>
-          <!--
-          <label for="ean">EAN-Code</label><br>
-          <input type="text" name="ean" value="" class="ean"><br><br>
-          -->
-          <button type="submit" name="product_submit" value="erfassen">Erfassen</button>
+        <label for="product_name">Produktbezeichnung</label><br>
+        <input type="text" name="product_name" value="" class="product_name"><br>
+        <label for="purchase_date">Gekauft am</label><br>
+        <input type="date" name="purchase_date" value="" class="purchase_date"><br>
+        <label for="price">Einkaufspreis</label><br>
+        <input type="number" step="0.05" name="price" value="" class="price"><br>
+        <label for="description">Beschreibung</label><br>
+        <input type="text" name="description" value="" class="description"><br>
+        <button type="submit" name="product_submit" value="erfassen">Erfassen</button>
       </form>
-
-<!--
-  </br></br>
-      <main>
-        <h2>Artikel erfassen</h2>
-        <p>Bitte mache ein Foto von deinem Produkt oder lade eins aus deinem Fotoalbum hoch.</p>
-        <div class="register">
-            <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-            <input type="file" accept="video/*;capture=camcorder" name="file" class="file"><br><br>
-
-
-                <p>Fülle bitte folgende Felder aus.</p>
-                  <input type="text" name="product_name" value="" class="product_name"><br>
-                  <label for="purchase_date">Gekauft am</label><br>
-                  <input type="date" name="purchase_date" value="" class="purchase_date"><br>
-                  <label for="description">Beschreibung</label><br>
-                  <input type="text" name="description" value="" class="description"><br>
-              <!--
-              <label for="ean">EAN-Code</label><br>
-              <input type="text" name="ean" value="" class="ean"><br><br>
-              -->
-              <!--
-            <button type="submit" name="register_submit" value="registrieren">Erfassen</button>
-          </form>
-
-          <?php if(!empty($msg)){ ?>
-          <div class="nachricht" role="alert">
-            <p><?php echo $msg ?></p>
-
-      </div>
-      <?php } ?>
-    </div>
-  </main>
-
--->
 
 </br>
 </br>

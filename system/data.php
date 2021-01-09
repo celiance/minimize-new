@@ -60,11 +60,11 @@ function get_user_by_id($id){
 	return $result->fetch();
 }
 
-function product_input($img, $product_name, $purchase_date, $description, $status, $owner_id){
+function product_input($img, $product_name, $purchase_date, $price, $description, $status, $owner_id){
 	$db = get_db_connection();
-	$sql = "INSERT INTO products (img, product_name, purchase_date, description, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?);";
+	$sql = "INSERT INTO products (img, product_name, purchase_date, price, description, status, owner_id ) VALUES (?, ?, ?, ?, ?, ?, ?);";
 	$stmt = $db->prepare($sql);
-	return $stmt->execute(array($img, $product_name, $purchase_date, $description, $status, $owner_id));
+	return $stmt->execute(array($img, $product_name, $purchase_date, $price, $description, $status, $owner_id));
 }
 
 
@@ -103,6 +103,13 @@ function update_status($product_id){
 	return $stmt->execute($values);
 }
 
+function update_haufigkeit($product_id, $haufigkeit){
+	$db = get_db_connection();
+	$sql = "UPDATE products SET haufigkeit=$haufigkeit WHERE id=$product_id;";
+	$stmt = $db->prepare($sql);
+	$values = array($product_id, $haufigkeit);
+	return $stmt->execute($values);
+}
 
 /* DELETE BEFEHLE */
 
@@ -111,6 +118,14 @@ function delete_profil($id){
 	$sql = "DELETE FROM user WHERE id=?;";
 	$stmt = $db->prepare($sql);
 	return $stmt->execute(array($id));
+}
+
+
+function delete_product($product_id){
+	$db = get_db_connection();
+	$sql = "DELETE FROM products WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	return $stmt->execute(array($product_id));
 }
 
 
