@@ -108,12 +108,7 @@ p{
 
 }
 
-h3 {
-  letter-spacing: 0.06em;
-  font-weight: 500;
-  font-size: var(--grösse2);
-  line-height: var(--zeilenabstand);
-}
+
 
 
 /*registrieren*/
@@ -285,6 +280,7 @@ section.onepage p{
 h3{
   margin: 0;
   padding: 0;
+  font-size: 1rem;
 }
 
 

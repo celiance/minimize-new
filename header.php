@@ -39,7 +39,7 @@
         <i class="fas fa-arrow-left fa-1.5x"></i>
     <?php } else { ?>
       <a href="home-uebersicht.php">
-        <img src="../assets/minimizelogo.png" alt="Logo" width="120px" id="logo">
+        <img src="../assets/logo.png" alt="Logo" width="120px" id="logo">
       </a>
     <?php } ?>
     </header>
