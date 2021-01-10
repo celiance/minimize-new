@@ -337,14 +337,16 @@ section.inventar main{
 body.inventar{
   background: whitesmoke;
   min-height: -webkit-fill-available;
+
 }
 
 
 
 
-section.inventar h2{
+section.inventar p{
   padding-left: 1rem;
   padding-top: 2rem;
+  font-size: 2rem;
 }
 
 
@@ -475,7 +477,7 @@ body.login {
 
 section.login button{
   border: 1px solid black;
-  background-color: red;
+  background-color: black;
   color: white;
   width: 80vw;
   padding: 10px;

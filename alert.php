@@ -11,7 +11,7 @@
   <section class="inventar navbackground">
       <main>
         <?php if(!empty($all_products)){ ?>
-          <h2>Brauchst du diese Produkte noch?</h2>
+          <p>Brauchst du diese Produkte noch?</p>
         <?php }else{?>
           <h2>Du hast aktuell keine Produkte in dieser Liste.</h2>
           <button type="button" name="button"  onclick="window.location.href='/MeinInventar.php'">Zum gesamten Inventar</button>

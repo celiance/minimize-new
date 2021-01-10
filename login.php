@@ -60,7 +60,7 @@
             <body>
               <section class="login">
           <main>
-              <h2>Bitte logge dich ein um die Funktionen von minimize zu nutzen.</h2>
+              <h2>Login</h2>
               <!-- Nachricht -->
                 <?php if(!empty($msg)){ ?>
                 <div class="nachricht" role="alert">
@@ -69,12 +69,12 @@
                 <?php } ?>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <div>
-                  <label for="email">E-Mail</label></br>
-                  <input type="text" name="email" value="" id="email"></br>
+                
+                  <input type="text" name="email" placeholder="Mailadresse" value="" id="email"></br>
                 </div>
                 <div>
-                  <label for="password">Passwort</label></br>
-                  <input type="password" name="password" value="" id="password"></br>
+
+                  <input type="password" name="password" placeholder="Passwort" value="" id="password"></br>
                 </div>
                 <button type="submit" name="login_submit" value="einloggen">Anmelden</button>
               </form>
