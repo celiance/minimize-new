@@ -24,12 +24,12 @@
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
                   <div class="produktbox">
                     <!--Produktbild-->
-                    <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="width:100%">
+                  <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="width:100%">
                     <!--Angaben Produkt-->
-                    <div class="alerttext">
+                  <div class="alerttext">
                         <p><?php echo $product['product_name']; ?></p>
                         <h6>
-                          Gekauft im:</br>
+                          Gekauft am:</br>
                           <?php
                             $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
                             echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");

@@ -799,7 +799,8 @@ body.produkt {
 .alerttext {
   letter-spacing: var(--zeichenabstand2);
   line-height: var(--zeilenabstand);
-  font-size: var(--grösse2);
+  font-size: 1rem;
+  color: red;
   padding-left: 2rem;
   padding-right: 2rem;
 }
@@ -807,6 +808,7 @@ body.produkt {
 .alerttext h6 {
   margin-top: 0;
   margin-bottom: 0;
+  color: red;
 }
 
 .löschenalert{
