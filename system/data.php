@@ -53,6 +53,13 @@ function email_check($email){
 	return false;
 }
 
+function get_all_users(){
+	$db = get_db_connection();
+	$sql = "SELECT * FROM user";
+	$result = $db->query($sql);
+	return $result->fetchAll();
+}
+
 function get_user_by_id($id){
 	$db = get_db_connection();
 	$sql = "SELECT * FROM user WHERE id = $id;";
