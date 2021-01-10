@@ -32,12 +32,12 @@
 
     <!-- HEADER HEADER -->
     <section>
-    <header>
+    <header class="desktop-hidden">
       <!--Pfeil anetue-->
       <?php if ($unterscheidung) { ?>
       <button type="button" name="button" onclick="window.history.back()" id="pfeil">
         <i class="fas fa-arrow-left fa-1.5x"></i>
-    <?php } else { ?>
+     <?php } else { ?>
       <a href="home-uebersicht.php">
         <img src="../assets/logo.png" alt="Logo" width="100px" id="logo">
       </a>

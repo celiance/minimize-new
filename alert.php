@@ -7,8 +7,8 @@
   $all_products = get_product_push($user_id);
 
 ?>
-<body>
-  <section class="alert">
+<body class="inventar">
+  <section class="inventar">
       <main>
         <?php if(!empty($all_products)){ ?>
           <p>Brauchst du diese Produkte noch?</p>
@@ -27,7 +27,7 @@
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
               <!--Produktbild-->
               <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="height:150px">
-            </a>
+             </a>
             <!--Angaben Produkt-->
 
             <div class="alerttext">

@@ -10,7 +10,7 @@
 
 ?>
 
-  <body class="inventar">
+  <body class="bgcolor">
     <section class="inventar">
         <main>
           <h2>Mein Inventar</h2>
@@ -27,7 +27,7 @@
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
                   <div class="produktbox">
                     <!--Produktbild-->
-                  <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="height:150px">
+                    <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild">
                     <!--Angaben Produkt-->
                   <div class="alerttext">
                         <h3><?php echo $product['product_name']; ?></h3>

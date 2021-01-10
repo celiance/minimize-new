@@ -123,7 +123,7 @@
 
   <!-- MAIN MAIN -->
 
-  <body>
+  <body class="artikelerfassen">
     <section class="artikelerfassen">
       <main>
         <h2>Artikel erfassen</h2>
@@ -131,7 +131,7 @@
 
         <form action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
         <?php if(!empty($msg)){ ?>
-          
+
         <div class="nachricht" role="alert">
           <p><?php echo $msg ?></p>
         <?php } ?>
@@ -140,7 +140,7 @@
 
         <input type="text" name="product_name" placeholder="Produktbezeichnung" value="" class="product_name"><br>
 
-        <input type="date" name="purchase_date"  value="" class="purchase_date"><br>
+        <input type="date" name="purchase_date" placeholder="Kaufdatum"  value="" class="purchase_date"><br>
 
 
         <input type="number" step="0.05" name="price" placeholder="Preis" value="" class="price"><br>

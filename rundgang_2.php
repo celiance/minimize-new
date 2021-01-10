@@ -2,6 +2,7 @@
   $unterscheidung = true;
 ?>
 <?php include ('header.php');?>
+<body class="headercolor">
     <section class="onepage">
         <main>
              <h2>Alles automatisch </h2>

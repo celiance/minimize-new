@@ -3,6 +3,7 @@
 ?>
 
 <?php include ('header.php');?>
+<body class="headercolor">
     <section class="onepage">
         <main>
              <h2>Schnell und Einfach!!</h2>

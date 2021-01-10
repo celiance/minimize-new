@@ -57,7 +57,7 @@
             $unterscheidung = true;
           ?>
           <?php include 'header.php';?>
-            <body>
+            <body class="headercolor">
               <section class="login">
           <main>
               <h2>Login</h2>
@@ -74,7 +74,7 @@
 
                   <input type="text" name="email" placeholder="Mailadresse" value="" id="email"></br>
                 </div>
-                
+
                 <div>
 
                   <input type="password" name="password" placeholder="Passwort" value="" id="password"></br>

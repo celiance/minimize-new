@@ -42,18 +42,21 @@
       <!--Produktanzeige-->
       <div class="produktonly">
         <main>
-          <div class="inhaltproduktonly">
-              <h3><?php echo $product['product_name']; ?></h3>
+          <div class="produktbox">
+
               <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" width="100">
-              <p><?php echo $product['description']; ?></p>
-              <p>Preis: <?php echo $product['price']; ?> CHF</p>
-              <p>Gekauft am:</p>
-              <p>
-                <?php
-                  $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
-                  echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
-                ?>
-              </p>
+              <div>
+                <h3><?php echo $product['product_name']; ?></h3>
+                <p><?php echo $product['description']; ?></p>
+                <p>Preis: <?php echo $product['price']; ?> CHF</p>
+                <p>Gekauft am:</p>
+                <p>
+                  <?php
+                    $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
+                    echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
+                  ?>
+                </p>
+              </div>
               <a href="">
                 <button class="produktonlyedit">
                   <i class="fas fa-pen"></i>

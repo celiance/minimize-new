@@ -74,6 +74,7 @@ header{
   height: 7vh;
   position: fixed;
   background-color: whitesmoke;
+  z-index: 10;
 }
 
 
@@ -118,6 +119,20 @@ p{
 input::placeholder{
   font-weight: 100;
 }
+
+input[type="date"]:before {
+    content: attr(placeholder) !important;
+    color: grey;
+    margin-right: 0.5em;
+  }
+  input[type="date"]:focus:before,
+  input[type="date"]:valid:before {
+    content: "";
+  }
+
+
+
+
 
 
   section.register{
@@ -290,6 +305,22 @@ h3{
 
 }
 
+.mobile-hidden {
+  display: none;
+}
+
+@media only screen and (min-width: 700px){
+  .mobile-hidden {
+    display: block;
+  }
+
+  .desktop-hidden {
+    display: none !important;
+  }
+}
+
+
+
 
 
 /*Home Onepage*/
@@ -321,7 +352,7 @@ section.home button {
 
 /*Scrollpage Inventar*/
 
-section.inventar main{
+section.inventar main {
     width: 90vw;
     min-height: 80vh;
     padding-bottom: 4rem;
@@ -341,7 +372,7 @@ section.inventar h2{
 
 
 
-body.inventar{
+.bgcolor{
   background: whitesmoke;
   min-height: -webkit-fill-available;
 
@@ -402,7 +433,6 @@ section.artikelerfassen{
 section.artikelerfassen main{
     width: 80vw;
     min-height: 85vh;
-    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -436,6 +466,12 @@ section.artikelerfassen{
 
 }
 
+
+.artikelerfassen header{
+  position:static;
+  background-color: white
+}
+
 /*onepage Menu*/
 
 
@@ -461,6 +497,9 @@ section.menu button{
 }
 
 
+.headercolor header{
+  background: white;
+}
 
 
 
@@ -713,7 +752,6 @@ a:hover, a:active{
 /*Boxes*/
 
 .produktonly{
-  background: white;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -725,17 +763,19 @@ a:hover, a:active{
   position: relative;
 }
 
+.produktonly main {
+  width: 90vw;
+  padding-left: 5vw;
+}
+
 body.produktseite{
   background-color: whitesmoke;
 }
 
-.inhaltproduktonly{
-  padding: 1rem;
+.produktseite header{
+  position: static;
 }
 
-.inhaltproduktonly p{
-  margin-top: 0;
-}
 
 
 
@@ -757,15 +797,12 @@ body.produktseite{
   }
 
   .löschen{
-    border: 1px solid black;
-    background-color: black;
-    color: white;
-    width: 90vw;
+    border: none;
+    color: black;
+    align-items: center;
     padding: 10px;
-    border-radius: 25px;
     margin-top: 10px;
-    letter-spacing: var(--zeichenabstand2);
-    font-size: var(--grösse2);
+    font-size: 1rem;
   }
 
 /*.box{
@@ -846,6 +883,8 @@ body.produktseite{
 
 }
 
+
+
 .produkt{
   position: relative;
   background: white;
@@ -905,6 +944,7 @@ body.produkt {
   font-weight: 100;
   font-size: 1rem;
   letter-spacing: 0.06em;
+  margin-left: 2rem;
 }
 
 
@@ -925,6 +965,7 @@ body.produkt {
   font-size: 1rem;
   letter-spacing: 0.06em;
   margin-top: 10px;
+  margin-left: 2rem;
 }
 
 
@@ -991,7 +1032,8 @@ section.profile main{
     grid-row-end: 1;
     border-radius: 25px;
     padding: 1rem;
-
+    width: 120px;
+    height: 120px;
 }
 
 
