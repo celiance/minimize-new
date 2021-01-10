@@ -46,4 +46,7 @@
   </div>
 </section>
 </main>
+<?php
+  $unterscheidungfooter = true;
+?>
 <?php include "footer.php";?>

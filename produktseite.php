@@ -96,9 +96,6 @@
                   </form>
         <?php }}?>
 
-        <a href="/alert.php">
-          <button class="löschen" type="submit" name="">zurück zur Übersicht</button>
-        </a>
 
         <!--Produkt löschen btn-->
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
