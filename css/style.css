@@ -1,3 +1,7 @@
+
+
+
+
 /*IMPORT----------------------------------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
@@ -74,7 +78,7 @@ header{
 
 
 #logo{
-  padding-left: 1rem;
+  padding: 1rem;
 }
 
 
@@ -110,29 +114,29 @@ p{
 
 
 
-
 /*registrieren*/
 input::placeholder{
   font-weight: 100;
 }
 
-section.register{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: -webkit-fill-available;
-}
 
-section.register main{
-    width: 80vw;
-    min-height: 85vh;
-    padding-bottom: 4rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  section.register{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      min-height: -webkit-fill-available;
+  }
 
-}
+  section.register main{
+      width: 80vw;
+      min-height: 90vh;
+      padding-bottom: 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+  }
 
 
 section.register h6 {
@@ -281,6 +285,9 @@ h3{
   margin: 0;
   padding: 0;
   font-size: 1rem;
+  font-family: "DM Sans";
+  font-weight: 100;
+
 }
 
 
@@ -321,6 +328,7 @@ section.inventar main{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-left: 5vw;
 
 }
 
@@ -467,7 +475,7 @@ body.login {
 
 section.login button{
   border: 1px solid black;
-  background-color: black;
+  background-color: red;
   color: white;
   width: 80vw;
   padding: 10px;
@@ -656,8 +664,15 @@ body.produktseite{
 }
 
 .inhaltproduktonly{
-  padding-left: 1rem;
+  padding: 1rem;
 }
+
+.inhaltproduktonly p{
+  margin-top: 0;
+}
+
+
+
 
 .buttonsproduktonly{
     padding-left: 1rem;
@@ -799,45 +814,51 @@ body.produkt {
 .alerttext {
   letter-spacing: var(--zeichenabstand2);
   line-height: var(--zeilenabstand);
-  font-size: 1rem;
-  color: red;
   padding-left: 2rem;
   padding-right: 2rem;
+  font-family: "DM Sans";
+
 }
 
 .alerttext h6 {
   margin-top: 0;
   margin-bottom: 0;
-  color: red;
+  color:grey;
+  font-weight: 100;
+  font-size: 1rem;
+
 }
 
 .löschenalert{
   border: 1px solid black;
   background-color: black;
   color: white;
-  width: 85vw;
-  padding: 5px;
+  width: 80vw;
+  padding: 10px;
   border-radius: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-  letter-spacing: 0.07em;
-  font-weight: 300;
-  font-size: var(--grösse2);
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
 }
+
+
+
+
+
+
+
 
 .artikelbehalten{
   border: 1px solid black;
   background-color: white;
   color: black;
-  width: 85vw;
-  padding: 5px;
+  width: 80vw;
+  padding: 10px;
   border-radius: 25px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 1rem;
-  letter-spacing: 0.07em;
-  font-weight: 300;
-  font-size: var(--grösse2);
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  margin-top: 10px;
 }
 
 
@@ -901,8 +922,8 @@ section.profile main{
 
 .testbild{
     grid-column-start: 1;
-    grid-row-end: 2;
-    border-radius: 25%;
+    grid-row-end: 1;
+    border-radius: 25px;
     padding: 1rem;
 }
 
@@ -910,7 +931,6 @@ section.profile main{
 .delete{
   color: var(--rot);
 }
-
 
 
 @media only screen and (min-height: 700px) {

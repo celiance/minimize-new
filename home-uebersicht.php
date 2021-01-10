@@ -7,14 +7,13 @@
   <body class="home">
     <section class="home">
         <main>
-            <h2>Hallo <?php echo $user['name']; ?>!</h2>
-            <h3> Was möchtest du tun?</h3>
+            <h2>Hallo <br><?php echo $user['name']; ?>!</h2>
               <div class="box">
                 <p>Mein Inventar ansehen</p>
 
                 <a href="/MeinInventar.php">
                   <button>
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                    <i class="fas fa-arrow-right "></i>
                   </button>
                 </a>
               </div>
@@ -24,7 +23,7 @@
 
                 <a href="/alert.php">
                   <button>
-                    <i class="fas fa-arrow-circle-right fa-2x"></i>
+                    <i class="fas fa-arrow-right "></i>
                   </button>
                 </a>
               </div>
