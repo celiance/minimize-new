@@ -14,15 +14,23 @@
     /* Häufigkeit */
     /* Häufigkeit */
     $haufigkeit = 1;
-header("Location: /produktVerkaufen.php?product_id=" . $product_id);
 
     if(isset($_POST['price_submit'])){
       $msg = "";
       $abfrage_valid = true;
 
       if(isset($_POST['haufigkeit'])){
-        foreach ($_POST['haufigkeit'] as $value) {
-          $haufigkeit = $value;
+        if ($_POST['haufigkeit']=="2.5"){
+            $haufigkeit = 2.5;
+        }
+        if ($_POST['haufigkeit']=="2"){
+            $haufigkeit = 2;
+        }
+        if ($_POST['haufigkeit']=="1.5"){
+            $haufigkeit = 1.5;
+        }
+        if ($_POST['haufigkeit']=="1"){
+            $haufigkeit = 1;
         }
       }else{
         $msg .= "Bitte wähle etwas aus.<br>";
@@ -30,10 +38,11 @@ header("Location: /produktVerkaufen.php?product_id=" . $product_id);
       }
       /*Datenbankeintrag */
       if($abfrage_valid){
-        $result = update_haufigkeit($product_id, $haufigkeit);
+        $result = update_haufigkeit($haufigkeit, $product_id);
         if($result){
+          $product_id = $product['id'];
           unset($_POST);
-
+          header("Location: /produktVerkaufen.php?product_id=" . $product_id);
         }else{
           $msg .= "Etwas hat nicht geklappt. Versuche es nochmal.</br>";
         }
@@ -41,6 +50,11 @@ header("Location: /produktVerkaufen.php?product_id=" . $product_id);
         $alert_type = "alert-warning";
         }
       }
+
+      /*if($abfrage_valid){
+        header("Location: https://minimize.celiance.ch");
+        header("Location: /produktVerkaufen.php?product_id=" . $product_id);
+      }*/
 
 
     /*Produkt löschen*/
@@ -74,9 +88,9 @@ header("Location: /produktVerkaufen.php?product_id=" . $product_id);
         <input type="radio" id="oft" name="haufigkeit" value="1">
         <label for="oft">fast nie</label><br>
       </fieldset>
-      <button type="submit" name="price_submit">Preis berechnen</button>
+      <button class="löschenalert" type="submit" name="price_submit">Preis berechnen</button>
     </form>
-    <button type="button" name="button" onclick="window.location.href='/produktseite.php?product_id=<?php echo $product['id'] ?>'">Abbrechen</button>
+    <button class="löschenalert" type="button" name="button" onclick="window.location.href='/produktseite.php?product_id=<?php echo $product['id'] ?>'">Abbrechen</button>
     <!--Produkt löschen btn-->
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
       <button class="löschen" type="submit" name="delete_product">Produkt löschen</button>

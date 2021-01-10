@@ -103,11 +103,11 @@ function update_status($product_id){
 	return $stmt->execute($values);
 }
 
-function update_haufigkeit($product_id, $haufigkeit){
+function update_haufigkeit($haufigkeit, $product_id){
 	$db = get_db_connection();
-	$sql = "UPDATE products SET haufigkeit=$haufigkeit WHERE id=$product_id;";
+	$sql = "UPDATE products SET haufigkeit=? WHERE id=?;";
 	$stmt = $db->prepare($sql);
-	$values = array($product_id, $haufigkeit);
+	$values = array($haufigkeit, $product_id);
 	return $stmt->execute($values);
 }
 
