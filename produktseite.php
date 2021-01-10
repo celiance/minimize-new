@@ -26,7 +26,7 @@
   }
 
   if(isset($_POST['delete_product'])){
-          $del_prod = delete_product($product_id);
+          $del_prod = delete_product($_POST['product_id']);
           if($del_prod){
             $product_deleted = true;
             $msg .= "Sie haben ihr Produkt erfolgreich gelöscht.</br>";
@@ -102,6 +102,7 @@
 
         <!--Produkt löschen btn-->
         <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+          <input type="hidden" name="product_id" value="<?php echo $product[id]; ?>">
           <button class="löschen" type="submit" name="delete_product">Produkt löschen</button>
         </form>
 
