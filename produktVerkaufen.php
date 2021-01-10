@@ -137,7 +137,7 @@
         if(successful) {
             alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
         } else {
-          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+          alert("Etwas ist schief gelaufen. Wir konnten den Inhalt nicht kopieren.");
         }
       }
       function copyDate() {
@@ -150,7 +150,7 @@
         if(successful) {
             alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
         } else {
-          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+          alert("Etwas ist schief gelaufen. Wir konnten den Inhalt nicht kopieren.");
         }
       }
   </script>
