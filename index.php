@@ -13,7 +13,7 @@
 <body>
     <section class="onepage">
         <main>
-            <h2> Rundgang starten!!! </h2>
+            <h2> Rundgang starten </h2>
              <p>Nutzte minimize und behalte den Überblick über dein Zuhause.</p>
 
              <button type="button" name="button" onclick="window.location.href='/rundgang_1.php'">
@@ -21,7 +21,7 @@
               </button>
 
             <button class="loginbutton" type="button" name="button" onclick="window.location.href='/login.php'">
-              <h6>Logintest</h6>
+            <h3> Login </h3>
             </button>
         </main>
 

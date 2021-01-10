@@ -1,8 +1,13 @@
 <?php
+  $unterscheidung = true;
+?>
+
+
+<?php
 
   include ('header.php');
   include ('login-wall.php');
-  $unterscheidung = true;
+
 
   $push_products = get_product_push($user_id);
 

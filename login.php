@@ -67,11 +67,14 @@
                   <p><?php echo $msg ?></p>
                 </div>
                 <?php } ?>
+
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+
                 <div>
-                
+
                   <input type="text" name="email" placeholder="Mailadresse" value="" id="email"></br>
                 </div>
+                
                 <div>
 
                   <input type="password" name="password" placeholder="Passwort" value="" id="password"></br>

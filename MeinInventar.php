@@ -1,14 +1,17 @@
 <?php
+  $unterscheidung = true;
+?>
+
+<?php
 
   include ('header.php');
   include 'login-wall.php';
-  $unterscheidung = true;
   $all_products = get_product($user_id);
 
 ?>
 
   <body class="inventar">
-    <section class="inventar navbackground">
+    <section class="inventar">
         <main>
           <h2>Mein Inventar</h2>
           <?php if(empty($all_products)){ ?>
@@ -24,17 +27,16 @@
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
                   <div class="produktbox">
                     <!--Produktbild-->
-                  <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="width:100%">
+                  <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="height:150px">
                     <!--Angaben Produkt-->
                   <div class="alerttext">
-                        <p><?php echo $product['product_name']; ?></p>
-                        <h6>
-                          Gekauft am:</br>
-                          <?php
+                        <h3><?php echo $product['product_name']; ?></h3>
+                        <h6>Gekauft am:</br></h6>
+                        <p><?php
                             $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
                             echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
-                          ?>
-                      </h6>
+                          ?></p>
+
                     </div>
 
                   </div>
@@ -42,5 +44,6 @@
               <?php }?>
           </div>
   </div>
+</section>
 </main>
 <?php include "footer.php";?>

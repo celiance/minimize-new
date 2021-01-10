@@ -7,8 +7,8 @@
   $all_products = get_product_push($user_id);
 
 ?>
-<body class="inventar">
-  <section class="inventar navbackground">
+<body>
+  <section class="alert">
       <main>
         <?php if(!empty($all_products)){ ?>
           <p>Brauchst du diese Produkte noch?</p>
@@ -18,7 +18,7 @@
         <?php  }  ?>
 
         <!--Alle Push-Produkte-->
-<?php foreach ($all_products as $product) { ?>
+        <?php foreach ($all_products as $product) { ?>
         <div class="produktbox">
           <!--Einzelnes Produkt-->
             <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
@@ -30,12 +30,12 @@
             <div class="alerttext">
               <p><?php echo $product['product_name']; ?></p>
               <h6>
-                Gekauft im:</br>
-                <?php
+                Gekauft am:</br>  </h6>
+                  <p><?php
                   $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
                   echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
-                ?>
-              </h6>
+                ?></p>
+
             </div>
             <div class="alertbutton">
               <i class="far fa-bell"></i>

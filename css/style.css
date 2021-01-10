@@ -73,7 +73,7 @@ header{
   width: 100%;
   height: 7vh;
   position: fixed;
-  background-color: grey;
+  background-color: whitesmoke;
 }
 
 
@@ -333,6 +333,13 @@ section.inventar main{
 }
 
 
+section.inventar h2{
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+
 
 body.inventar{
   background: whitesmoke;
@@ -341,13 +348,27 @@ body.inventar{
 }
 
 
-
-
 section.inventar p{
-  padding-left: 1rem;
-  padding-top: 2rem;
-  font-size: 2rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
 }
+
+section.inventar h3{
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+section.inventar h6{
+  padding-top: 1rem;
+}
+
+
+
+
+
+
 
 
 .alertbutton{
@@ -366,6 +387,29 @@ section.inventar p{
 }
 
 
+
+/*artikel erfassen */
+
+section.artikelerfassen{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 80vh;
+    min-height: -webkit-fill-available;
+}
+
+section.artikelerfassen main{
+    width: 80vw;
+    min-height: 85vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
 section.artikelerfassen button{
   border: 1px solid black;
   background-color: black;
@@ -373,9 +417,10 @@ section.artikelerfassen button{
   width: 80vw;
   padding: 10px;
   border-radius: 25px;
-  margin-top: 45px;
-  letter-spacing: var(--zeichenabstand2);
-  font-size: var(--grösse2);
+  margin-top: 70px;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
 }
 
 
@@ -420,29 +465,48 @@ section.menu button{
 
 
 /*Scrollpage Alert*/
-body.alert{
-  background: whitesmoke;
-  c
-}
-
-section.alert{
-    display: block;
-
-}
-
 
 section.alert main{
-    min-height: 100vh;
-    width: 100%;
-    display: block;
+    width: 90vw;
+    min-height: 80vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 5vw;
 
 }
-
 
 
 section.alert h2{
   padding-left: 1rem;
-  padding-top: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 5rem;
+}
+
+
+
+body.alert{
+  background: whitesmoke;
+  min-height: -webkit-fill-available;
+
+}
+
+
+section.alert p{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+section.alert h3{
+  padding-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+section.alert h6{
+  padding-top: 1rem;
 }
 
 
@@ -927,6 +991,7 @@ section.profile main{
     grid-row-end: 1;
     border-radius: 25px;
     padding: 1rem;
+
 }
 
 

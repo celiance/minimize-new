@@ -8,5 +8,5 @@
              <h2>Schnell und Einfach!!</h2>
               <p> Beim Einkauf oder erfassen eines Gegenstandes kannst du mit Minimize den Barcode des Produkts scannen. </p>
             <button type="button" name="button" onclick="window.location.href='/rundgang_2.php'">
-              <i class="fas fa-arrow-right fa-3x"></i>
+              <i class="fas fa-arrow-right fa-2x"></i>
         </main>
