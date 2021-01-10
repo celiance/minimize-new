@@ -21,6 +21,7 @@
     $target = date_create($now);
     $interval = date_diff($origin, $target);
     $timeDiff = $interval->format('%y');
+    $timeDiffShow = $interval->format('%y Jahr/en %m Monate und %d Tagen');
 
     /*Preisberechnung*/
     /*Preisberechnung*/
@@ -52,31 +53,34 @@
   </br>
   </br>
   </br>
-    <h2 id="produkttitel"><?php echo $product['product_name']; ?></h2>
-    <!-- Copy Text BTN -->
+    <!-- Bild -->
+    <!-- Bild -->
+    <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="Bild deines Produktes" width="100"></br>
+    <a id="download" href="uploads/files/<?php echo $product['img'] ?>" download="uploads/files/<?php echo $product['img'] ?>">Bild herunterladen</a>
+    <!-- TITEL -->
+    <!-- TITEL -->
+    <input type="text" value="<?php echo $product['product_name']; ?>" id="produkttitel">
     <button onclick="copyTitel()">Titel kopieren</button>
-    <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="Foto deines Produktes" width="100">
-    <p>Du hast das Produkt gekauft im:</p>
-    <p><?php
+    <!-- Neupreis -->
+    <!-- Neupreis -->
+    <input type="text" value="Neupreis: <?php echo $product['price']; ?> CHF" id="neupreis">
+    <button onclick="copyPrice()">Neupreis kopieren</button>
+    <!-- Verkaufspreis -->
+    <!-- Verkaufspreis -->
+    <input type="text" value="Neuer Verkaufspreis: <?php echo $priceUpdate; ?> CHF" id="verkaufspreis">
+    <button onclick="copyPriceNew()">neuer Verkaufspreis kopieren</button>
+    <!-- Beschreibung -->
+    <!-- Beschreibung -->
+    <input type="text" value="<?php echo $product['description']; ?>" id="descr">
+    <button onclick="copyDescr()">Beschreibung kopieren</button>
+    <!-- Einkaufsdatum -->
+    <!-- Einkaufsdatum -->
+    <input type="text" value="Einkaufsdatum: <?php
       $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
       echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
-    ?></p>
-    <!-- Copy Text BTN -->
-      <button onclick="copyTitel()">Einkaufsdatum kopieren</button>
-    <!-- Copy Text BTN -->
-    <p>Das war vor: <?php echo $timeDiff; ?> Jahr/en</p>
-    <p>Neupreis: <?php echo $product['price']; ?> CHF</p>
-    <!-- Copy Text BTN -->
-      <button onclick="copyTitel()">Neupreis kopieren</button>
-    <!-- Copy Text BTN -->
-    <h4>neuer Verkaufspreis: <?php echo $priceUpdate; ?> CHF</h4>
-    <!-- Copy Text BTN -->
-      <button onclick="copyTitel()">neuer Verkaufspreis kopieren</button>
-    <!-- Copy Text BTN -->
-    <p><?php echo $product['description']; ?></p>
-    <!-- Copy Text BTN -->
-      <button onclick="copyTitel()">Beschreibung kopieren</button>
-    <!-- Copy Text BTN -->
+    ?>" id="einkaufsdatum">
+    <button onclick="copyDate()">Einkaufsdatum kopieren</button>
+    <p><i>Du hast das Produkt vor <?php echo $timeDiffShow; ?> gekauft</i></p>
 
 
     <!--Produkt löschen btn-->
@@ -101,9 +105,61 @@
         const successful = document.execCommand('copy');   // copy input value, and store success if needed
 
         if(successful) {
-            alert("Copied the text: " + inputEl.value);
+            alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
         } else {
-            // ...
+          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+        }
+      }
+      function copyPrice() {
+        let inputEl = document.getElementById("neupreis");
+        inputEl.select();                                    // Select element
+        inputEl.setSelectionRange(0, inputEl.value.length); // select from 0 to element length
+
+        const successful = document.execCommand('copy');   // copy input value, and store success if needed
+
+        if(successful) {
+            alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
+        } else {
+          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+        }
+      }
+      function copyPriceNew() {
+        let inputEl = document.getElementById("verkaufspreis");
+        inputEl.select();                                    // Select element
+        inputEl.setSelectionRange(0, inputEl.value.length); // select from 0 to element length
+
+        const successful = document.execCommand('copy');   // copy input value, and store success if needed
+
+        if(successful) {
+            alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
+        } else {
+          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+        }
+      }
+      function copyDescr() {
+        let inputEl = document.getElementById("descr");
+        inputEl.select();                                    // Select element
+        inputEl.setSelectionRange(0, inputEl.value.length); // select from 0 to element length
+
+        const successful = document.execCommand('copy');   // copy input value, and store success if needed
+
+        if(successful) {
+            alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
+        } else {
+          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+        }
+      }
+      function copyDate() {
+        let inputEl = document.getElementById("einkaufsdatum");
+        inputEl.select();                                    // Select element
+        inputEl.setSelectionRange(0, inputEl.value.length); // select from 0 to element length
+
+        const successful = document.execCommand('copy');   // copy input value, and store success if needed
+
+        if(successful) {
+            alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
+        } else {
+          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
         }
       }
   </script>
