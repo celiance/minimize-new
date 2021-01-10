@@ -10,7 +10,13 @@
 <body class="inventar">
   <section class="inventar navbackground">
       <main>
-        <h2>Brauchst du diese Artikel noch?</h2>
+        <?php if(!empty($all_products)){ ?>
+          <h2>Brauchst du diese Produkte noch?</h2>
+        <?php }else{?>
+          <h2>Du hast aktuell keine Produkte in dieser Liste.</h2>
+          <button type="button" name="button"  onclick="window.location.href='/MeinInventar.php'">Zum gesamten Inventar</button>
+        <?php  }  ?>
+
         <!--Alle Push-Produkte-->
 <?php foreach ($all_products as $product) { ?>
         <div class="produktbox">

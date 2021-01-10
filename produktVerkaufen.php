@@ -87,8 +87,9 @@
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
       <button class="löschen" type="submit" name="delete_product">Produkt löschen</button>
     </form>
-    <button class="löschen" type="submit" name="" onclick="window.location.href='/MeinInventar.php">zurück zur Übersicht</button>
-
+    <a href="/alert.php">
+      <button class="löschen" type="submit" name="">zurück zur Übersicht</button>
+    </a>
   </main>
   <br/>
   <br/>
@@ -107,7 +108,7 @@
         if(successful) {
             alert("Folgender Produkttext wurde kopiert: " + inputEl.value);
         } else {
-          alert("Etwas ist scheif gelaufen. Wir konnten den Inhalt nicht kopieren.");
+          alert("Etwas ist schief gelaufen. Wir konnten den Inhalt nicht kopieren.");
         }
       }
       function copyPrice() {

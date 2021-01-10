@@ -13,14 +13,13 @@
     <section class="inventar navbackground">
 
         <main>
-            <h2>Mein Inventar</h2>
+          <h2>Mein Inventar</h2>
+          <?php if(empty($all_products)){ ?>
             <div class="container">
-            <!--Suchfeld-->
-	             <div class="searchbox">
-		               <input type="text"placeholder="Suche">
-		                 <span></span>
-	             </div>
+              <p>Du hast noch keine Produkte in deinem Inventar.</p>
+              <button type="button" name="button"  onclick="window.location.href='/artikelErfassen.php'">erstes Produkt erfassen</button>
             </div>
+          <?php }  ?>
             <!--Alle Produkte-->
             <div class="container">
               <!--Einzelnes Produkt-->

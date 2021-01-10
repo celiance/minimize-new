@@ -22,20 +22,16 @@ header("Location: /produktVerkaufen.php?product_id=" . $product_id);
       $abfrage_valid = true;
 
       if(isset($_POST['haufigkeit'])){
-
         foreach ($_POST['haufigkeit'] as $value) {
           $haufigkeit = $value;
         }
       }else{
         $msg .= "Bitte wähle etwas aus.<br>";
         $abfrage_valid = false;
-
       }
       /*Datenbankeintrag */
       if($abfrage_valid){
-
         $result = update_haufigkeit($product_id, $haufigkeit);
-
         if($result){
           unset($_POST);
 
