@@ -28,7 +28,8 @@
     $price = $product['price'];
 
     $priceUpdate_bef = $timeDiff * 5 + 10 * $haufigkeit;
-    $priceUpdate = $price-$price*$priceUpdate_bef/100;
+    $priceUpdate_raw = $price-$price*$priceUpdate_bef/100;
+    $priceUpdate = round($priceUpdate_raw/ 0.05) * 0.05;
 
     /*Produkt löschen*/
     /*Produkt löschen*/

@@ -20,16 +20,16 @@
       $abfrage_valid = true;
 
       if(isset($_POST['haufigkeit'])){
-        if ($_POST['haufigkeit']=="2.5"){
+        if ($_POST['haufigkeit']=="tag"){
             $haufigkeit = 2.5;
         }
-        if ($_POST['haufigkeit']=="2"){
+        if ($_POST['haufigkeit']=="woche"){
             $haufigkeit = 2;
         }
-        if ($_POST['haufigkeit']=="1.5"){
+        if ($_POST['haufigkeit']=="monat"){
             $haufigkeit = 1.5;
         }
-        if ($_POST['haufigkeit']=="1"){
+        if ($_POST['haufigkeit']=="nie"){
             $haufigkeit = 1;
         }
       }else{
@@ -38,11 +38,9 @@
       }
       /*Datenbankeintrag */
       if($abfrage_valid){
-        $result = update_haufigkeit($haufigkeit, $product_id);
+        $result = update_haufigkeit($haufigkeit, $_POST['product_id']);
         if($result){
-          $product_id = $product['id'];
-          unset($_POST);
-          header("Location: /produktVerkaufen.php?product_id=" . $product_id);
+          header("Location: /produktVerkaufen.php?product_id=" . $_POST['product_id']);
         }else{
           $msg .= "Etwas hat nicht geklappt. Versuche es nochmal.</br>";
         }
@@ -53,6 +51,7 @@
 
       /*if($abfrage_valid){
         header("Location: https://minimize.celiance.ch");
+        header("Location: /produktVerkaufen.php?product_id=" . $_GET['product_id']);
         header("Location: /produktVerkaufen.php?product_id=" . $product_id);
       }*/
 
@@ -79,14 +78,15 @@
     <p>Wie oft hast du den Artikel benutzt?</p>
     <form class="" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
       <fieldset>
-        <input type="radio" id="nie" name="haufigkeit" value="2.5">
+        <input type="radio" name="haufigkeit" value="tag">
         <label for="nie">einmal pro Tag</label><br>
-        <input type="radio" id="bizli" name="haufigkeit" value="2">
+        <input type="radio" name="haufigkeit" value="woche">
         <label for="bizli">einmal pro Woche</label><br>
-        <input type="radio" id="oft" name="haufigkeit" value="1.5">
+        <input type="radio" name="haufigkeit" value="monat">
         <label for="oft">einmal pro Monat</label><br>
-        <input type="radio" id="oft" name="haufigkeit" value="1">
+        <input type="radio" name="haufigkeit" value="nie">
         <label for="oft">fast nie</label><br>
+        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
       </fieldset>
       <button class="löschenalert" type="submit" name="price_submit">Preis berechnen</button>
     </form>
