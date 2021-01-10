@@ -76,11 +76,9 @@
         }else{
           $msg .= "Etwas hat nicht geklappt. Versuche es nochmal.</br>";
         }
-
     }else{
       $alert_type = "alert-warning";
     }
-
   }
 
 

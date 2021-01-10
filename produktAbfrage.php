@@ -11,7 +11,6 @@
     echo "die Produkt-ID fehlt";
   }
 
-
     /* Häufigkeit */
     /* Häufigkeit */
     $haufigkeit = 1;
@@ -37,7 +36,6 @@ header("Location: /produktVerkaufen.php?product_id=" . $product_id);
 
         }else{
           $msg .= "Etwas hat nicht geklappt. Versuche es nochmal.</br>";
-
         }
         }else{
         $alert_type = "alert-warning";

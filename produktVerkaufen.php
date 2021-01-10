@@ -47,12 +47,6 @@
   <!-- MAIN MAIN -->
   <main>
     <h2>Produkt verkaufen</h2>
-
-
-    <!--Produktanzeige-->
-  </br>
-  </br>
-  </br>
     <!-- Bild -->
     <!-- Bild -->
     <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="Bild deines Produktes" width="100"></br>
@@ -91,11 +85,6 @@
       <button class="löschen" type="submit" name="">zurück zur Übersicht</button>
     </a>
   </main>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
 
   <script type="text/javascript">
       function copyTitel() {

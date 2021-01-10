@@ -5,13 +5,10 @@
   $unterscheidung = true;
   $all_products = get_product($user_id);
 
-
 ?>
-
 
   <body class="inventar">
     <section class="inventar navbackground">
-
         <main>
           <h2>Mein Inventar</h2>
           <?php if(empty($all_products)){ ?>
@@ -43,11 +40,7 @@
                   </div>
                 </a>
               <?php }?>
-
           </div>
-
-
   </div>
-
 </main>
 <?php include "footer.php";?>

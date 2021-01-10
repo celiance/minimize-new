@@ -48,11 +48,8 @@
             </a>
             -->
             </a>
-
       </div>
       <?php }?>
-
 </div>
-
 </main>
 <?php include "footer.php";?>

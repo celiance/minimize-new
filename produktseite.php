@@ -31,9 +31,6 @@
           }
       }
 
-
-
-
 ?>
   <!-- MAIN MAIN -->
   <body class="produktseite">
@@ -105,10 +102,4 @@
 
       </main>
 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
   <?php include 'footer.php';?>
