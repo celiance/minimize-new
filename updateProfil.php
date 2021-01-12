@@ -90,12 +90,12 @@
   $unterscheidung = true;
 ?>
 <?php include 'header.php';?>
-  <body>
-    <section class="register">
+  <body class="headercolor">
+    <section class="profilupdate">
         <main>
-             <h2>Profil Aktualisieren</h2>
-             <p>Aktualisiere sein Konto</p>
-             <?php echo $user_id ?>
+             <h2>Profil bearbeiten</h2>
+             <p>Aktualisiere dein Konto</p>
+
              <div class="register">
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <input type="text" placeholder="Dein Name" name="name" value="<?php echo $user['name']; ?>" class="name"></br>
@@ -106,9 +106,7 @@
                 <input type="password" placeholder="Passwort" name="password" value="" class="password"></br>
                 <button type="submit" name="updatepass_submit" value="registrieren">Passwort aktualisieren</button>
               </form>
-              <a href="profil.php">
-                <h6>Zurück</h6>
-              </a>
+          
             </div>
           <?php if(!empty($msg)){ ?>
           <div class="nachricht" role="alert">

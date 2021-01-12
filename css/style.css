@@ -302,6 +302,7 @@ h3{
   font-size: 1rem;
   font-family: "DM Sans";
   font-weight: 100;
+  line-height: var(--zeilenabstand);
 
 }
 
@@ -395,22 +396,29 @@ section.inventar h6{
   padding-top: 1rem;
 }
 
+.produktboxinventar{
+  position: relative;
+  background: white;
+  border-radius: 25px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 40% auto;
+  height: auto;
+  color: var(--black);
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  grid-template-columns: 40% auto;
 
 
-
-
+}
 
 
 
 .alertbutton{
-  border: solid 1px red;
-  background-color: red;
-  border-radius: 50px;
-  height: 20px;
-  width: 20px;
+  color:red;
   position: absolute;
-  top: 10px;
-  right:10px;
+  top: 25px;
+  right:25px;
 }
 
 .alertbutton span{
@@ -465,6 +473,38 @@ section.artikelerfassen{
 
 
 }
+
+
+.artikelerfassen header {
+  position: static;
+}
+
+.file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+
+
+
+label{
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  width: 75vw;
+  padding: 10px;
+  border-radius: 25px;
+  font-weight: 100;
+  display: inline-block;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
 
 
 .artikelerfassen header{
@@ -671,13 +711,6 @@ section.info main{
   font-size: 1.5rem;
 }
 
-.iconloggout{
-  color: black;
-  font-size: 1.5rem;
-}
-
-
-
 
 
 .icon{
@@ -751,22 +784,41 @@ a:hover, a:active{
 
 /*Boxes*/
 
-.produktonly{
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: var(--black);
-  margin-bottom: 10%;;
-  border-radius: 25px;
-  margin-top: 50px;
-  position: relative;
+section.produktonly{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 80vh;
+    min-height: -webkit-fill-available;
 }
 
-.produktonly main {
-  width: 90vw;
-  padding-left: 5vw;
+section.produktonly main{
+    width: 80vw;
+    min-height: 85vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
 }
+
+
+section.produktonly button{
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 80vw;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
+
+
 
 body.produktseite{
   background-color: whitesmoke;
@@ -777,12 +829,6 @@ body.produktseite{
 }
 
 
-
-
-
-.buttonsproduktonly{
-    padding-left: 1rem;
-  }
 
 .produktonlyedit{
     border: none;
@@ -798,11 +844,15 @@ body.produktseite{
 
   .löschen{
     border: none;
+    background-color: whitesmoke;
     color: black;
     align-items: center;
     padding: 10px;
     margin-top: 10px;
+    padding-left: 90px;
     font-size: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 4rem;
   }
 
 /*.box{
@@ -877,24 +927,30 @@ body.produktseite{
   grid-template-columns: 40% auto;
   height: auto;
   color: var(--black);
-  margin-top: 1rem;
   padding-bottom: 1rem;
   grid-template-columns: 40% auto;
 
 }
 
-
-
-.produkt{
-  position: relative;
-  background: white;
-  border-radius: 25px;
-  height: auto;
-  height: auto;
-  color: var(--black);
-  margin-top: 1rem;
+.produktbox p{
+  padding-left: 2rem;
+  color:grey;
+  margin-top: 0;
 
 }
+
+.produktbox h3{
+  padding-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+.produktbox h4{
+  padding-left: 2rem;
+  margin-top: 1rem;
+}
+
+
 body.produkt {
   background-color: whitesmoke;
 }
@@ -944,7 +1000,7 @@ body.produkt {
   font-weight: 100;
   font-size: 1rem;
   letter-spacing: 0.06em;
-  margin-left: 2rem;
+  margin-top: 2rem;
 }
 
 
@@ -965,7 +1021,6 @@ body.produkt {
   font-size: 1rem;
   letter-spacing: 0.06em;
   margin-top: 10px;
-  margin-left: 2rem;
 }
 
 
@@ -1010,6 +1065,11 @@ section.profile main{
 }
 
 
+.artikelupdate header{
+  position: static;
+}
+
+
 .navprofilelink {
   display: flex;
   font-size: var(--grösse2);
@@ -1024,7 +1084,38 @@ section.profile main{
 
 }
 
+section.profilupdate{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: -webkit-fill-available;
+}
 
+section.profilupdate main{
+    width: 80vw;
+    min-height: 90vh;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+
+section.profilupdate button {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  width: 80vw;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 20px;
+  margin-bottom: 2rem;
+  font-weight: 100;
+  font-size: 1rem;
+  letter-spacing: 0.06em;
+}
 
 
 .testbild{
@@ -1073,15 +1164,6 @@ input{
 
 
 
-
-
-label{
-  margin: 50px 0px;
-  letter-spacing: 0.05em;
-  font-weight: 300;
-  font-size: var(--grösse2);
-
-}
 
 .desktop-meldung{
   display: none;

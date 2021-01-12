@@ -7,18 +7,19 @@
   $all_products = get_product_push($user_id);
 
 ?>
-<body class="inventar">
-  <section class="inventar">
+<body class="headercolor">
+  <section class="produktonly">
       <main>
+        <h2>Willst du das verkaufen?</h2>
         <?php if(!empty($all_products)){ ?>
           <p>Brauchst du diese Produkte noch?</p>
         <?php }else{?>
-          <h2>Du hast aktuell keine Produkte in dieser Liste.</h2>
+          <p>Du hast aktuell keine Produkte in dieser Liste.</p>
           <button type="button" name="button"  onclick="window.location.href='/MeinInventar.php'">Zum gesamten Inventar</button>
         <?php  }  ?>
 
         <!--Alle Push-Produkte-->
-        <section class="inventar">
+        <div class="produktbox">
         <?php foreach ($all_products as $product) { ?>
 
           <!--Einzelnes Produkt-->

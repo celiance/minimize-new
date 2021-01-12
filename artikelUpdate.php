@@ -113,6 +113,7 @@
 ?>
 
   <!-- MAIN MAIN -->
+  <body class="artikelupdate">
   <section class="artikelerfassen">
     <main>
       <h2>Artikel bearbeiten</h2>
@@ -125,7 +126,7 @@
         <p><?php echo $msg ?></p>
       <?php } ?>
       <input type="file" name="bildfile" class="file" id="file"><br><br>
-
+      <label for="file">Datei hochladen</label>
 
       <input type="text" name="product_name" placeholder="Produktbezeichnung" value="" class="product_name"><br>
 

@@ -15,7 +15,7 @@
 
 <body class="headercolor">
    <main class="mobile-hidden">
-    <h2> Rundgang starten </h2>
+     <img src="../assets/home.png">
     </main>
 
     <section class="onepage desktop-hidden">

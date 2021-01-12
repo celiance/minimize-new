@@ -2,7 +2,7 @@
   $unterscheidung = true;
 ?>
 <?php include 'header.php';?>
-  <body>
+  <body class="headercolor">
     <section class="profile">
         <main>
           <h2>Hilfe</h2>

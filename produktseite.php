@@ -40,26 +40,26 @@
   <!-- MAIN MAIN -->
   <body class="produktseite">
       <!--Produktanzeige-->
-      <div class="produktonly">
+      <section class="produktonly">
         <main>
           <div class="produktbox">
 
               <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" width="100">
               <div>
-                <h3><?php echo $product['product_name']; ?></h3>
-                <p><?php echo $product['description']; ?></p>
-                <p>Preis: <?php echo $product['price']; ?> CHF</p>
+                <h4><?php echo $product['product_name']; ?></h4>
+                <p>Preis: </p><h3><?php echo $product['price']; ?> CHF</h3>
                 <p>Gekauft am:</p>
                 <p>
-                  <?php
+                <h3>  <?php
                     $date = DateTime::createFromFormat('Y-m-d', $product["purchase_date"]);
-                    echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
-                  ?>
+                  echo htmlspecialchars($date->format('F Y'), ENT_QUOTES, "UTF-8");
+                  ?></h3>
                 </p>
+                <h3><?php echo $product['description']; ?></h3>
               </div>
               <a href="">
                 <button class="produktonlyedit">
-                  <i class="fas fa-pen"></i>
+                  <i class="fas fa-pen "></i>
                 </button>
               </a>
           </div>

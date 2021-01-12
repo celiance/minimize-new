@@ -87,6 +87,7 @@
     </a>
   </main>
 
+
   <script type="text/javascript">
       function copyTitel() {
         let inputEl = document.getElementById("produkttitel");
@@ -155,4 +156,5 @@
       }
   </script>
 
-<?php include 'footer.php';?>
+
+  <?php include 'footer.php';?>

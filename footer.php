@@ -8,27 +8,27 @@
 
     <a href="/menu.php">
       <div class="iconfooter">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars color"></i>
     </div>
 
     <a href="/home-uebersicht.php">
       <div class="iconfooter">
-        <i class="fas fa-home"></i>
+        <i class="fas fa-home color"></i>
     </div>
 
     <a href="/artikelErfassen.php">
       <div class="iconfooter">
-        <i class="fas fa-plus-circle"></i>
+        <i class="fas fa-plus-circle color"></i>
     </div>
 
     <a href="/alert.php">
       <div class="iconfooter">
-        <i class="far fa-bell"></i>
+        <i class="far fa-bell color"></i>
     </div>
 
         <a href="/profil.php">
           <div class="iconfooter">
-            <i class="far fa-user"></i>
+            <i class="far fa-user color"></i>
         </div>
   </nav>
 
@@ -37,27 +37,27 @@
 
     <a href="/menu.php">
       <div class="iconfooter">
-        <i class="fas fa-bars"></i>
+        <i class="fas fa-bars color"></i>
     </div>
 
     <a href="/home-uebersicht.php">
       <div class="iconfooter">
-        <i class="fas fa-home"></i>
+        <i class="fas fa-home color"></i>
     </div>
 
     <a href="/artikelErfassen.php">
       <div class="iconfooter">
-        <i class="fas fa-plus-circle"></i>
+        <i class="fas fa-plus-circle color"></i>
     </div>
 
     <a href="/alert.php">
       <div class="iconfooter">
-        <i class="far fa-bell"></i>
+        <i class="far fa-bell color"></i>
     </div>
 
         <a href="/profil.php">
           <div class="iconfooter">
-            <i class="far fa-user"></i>
+            <i class="far fa-user color"></i>
         </div>
   </nav>
 <?php } ?>
