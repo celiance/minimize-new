@@ -16,9 +16,9 @@
           <h2>Mein Inventar</h2>
           <?php if(empty($all_products)){ ?>
 
-              <p>Du hast noch keine Produkte in deinem Inventar.</p>
+              <h4>Du hast noch keine Produkte in deinem Inventar.</h4>
               <button type="button" name="button"  onclick="window.location.href='/artikelErfassen.php'">erstes Produkt erfassen</button>
-    
+
           <?php }  ?>
             <!--Alle Produkte-->
             <div class="container">

@@ -413,6 +413,11 @@ section.inventar h6{
 }
 
 
+section.inventar h4{
+  padding: 1rem;
+}
+
+
 
 .alertbutton{
   color:red;
@@ -804,7 +809,7 @@ section.produktonly main{
 }
 
 
-section.produktonly button{
+.löschenalert{
   border: 1px solid black;
   background-color: black;
   color: white;
@@ -868,6 +873,10 @@ body.produktseite{
   box-shadow:  2px -4px 10px #b7b7b7, -3px 3px 12px #ffffff;
 
 } */
+
+.produktonlyedit{
+  background-color: black;
+}
 
 
 .box{
