@@ -99,14 +99,16 @@
              <div class="register">
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <input type="text" placeholder="Dein Name" name="name" value="<?php echo $user['name']; ?>" class="name"></br>
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                 <button type="submit" name="updatename_submit" value="registrieren">Name aktualisieren</button>
               </form>
             </br>
               <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
                 <input type="password" placeholder="Passwort" name="password" value="" class="password"></br>
+                <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
                 <button type="submit" name="updatepass_submit" value="registrieren">Passwort aktualisieren</button>
               </form>
-          
+
             </div>
           <?php if(!empty($msg)){ ?>
           <div class="nachricht" role="alert">

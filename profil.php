@@ -21,36 +21,30 @@
     <section class="menu">
         <main>
               <div class="menu">
-                <p><?php echo $user['name']; ?></p>
-                  <a href="">
-                    <button type="button" name="button">
-                      <i class="fas fa-arrow-right "></i>
-                    </button>
+                <a href="/updateProfil.php"><p><?php echo $user['name']; ?></p></a>
+                  <a href="/updateProfil.php">
+
                   </a>
                 </div>
 
               <div class="menu">
                 <p><?php echo $user['email']; ?></p>
                 <a href="">
-                  <button type="button" name="button">
-                    <i class="fas fa-arrow-right"></i>
-                  </button>
+
                 </a>
               </div>
 
               <div class="menu">
                 <p>Passwort *****</p>
-                <a href="">
-                  <button type="button" name="button">
-                    <i class="fas fa-arrow-right"></i>
-                  </button>
+                <a href="/updateProfil.php">
+
                 </a>
               </div>
 
               <div class="menu">
-                <p>Ausloggen</p>
-                <a href="">
-                  <button type="button" name="button" onclick="window.location.href='/index.php'">
+                <a href="/login.php"><p>Ausloggen</p></a>
+                <a href="/login.php">
+                  <button type="button" name="button" onclick="window.location.href='/login.php'">
                     <i class="fas fa-arrow-right "></i>
                   </button>
                 </a>

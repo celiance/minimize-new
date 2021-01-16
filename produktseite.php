@@ -57,13 +57,11 @@
                 </p>
                 <h3><?php echo $product['description']; ?></h3>
               </div>
-              <a href="">
-                <button class="produktonlyedit">
+                <button class="produktonlyedit" onclick="window.location.href='/artikelUpdate.php?product_id=<?php echo $product['id'] ?>'">
                   <i class="fas fa-pen "></i>
                 </button>
-              </a>
           </div>
-          <!--QUITTUNG QUITTUNG QUITTUNG
+          <!--QUITTUNG QUITTUNG QUITTUNG-->
           <div class="quittungbox">
             <a href="<?php $product['quittung']; ?>">
             <p>Quittung ansehen</p>
@@ -71,7 +69,7 @@
                 <i class="fas fa-arrow-circle-right fa-2x"></i>
               </button>
             </a>
-          </div>-->
+          </div>
 
           <!--glöckli wird nur angezeigt, wenn der push aktiv ist-->
           <?php

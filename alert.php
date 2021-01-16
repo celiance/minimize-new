@@ -27,7 +27,7 @@
               <div class="produktbox">
                 <a href="<?php echo $base_url ?>/produktseite.php?product_id=<?php echo $product['id'] ?>">
               <!--Produktbild-->
-              <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" style="height:150px">
+              <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="produktbild" style="height:150px">
              </a>
             <!--Angaben Produkt-->
 

@@ -93,7 +93,7 @@ function get_product_by_id($product_id){
 /* Produkt-Alert */
 function get_product_push($owner_id){
 	$db = get_db_connection();
-	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND status <= DATE_ADD(NOW(),INTERVAL -10 DAY) ORDER BY purchase_date;";
+	$sql = "SELECT * FROM products WHERE owner_id = $owner_id AND status <= DATE_ADD(NOW(),INTERVAL -180 DAY) ORDER BY purchase_date;";
 	$result = $db->query($sql);
 	return $result->fetchAll();
 }
@@ -115,6 +115,14 @@ function update_haufigkeit($haufigkeit, $product_id){
 	$sql = "UPDATE products SET haufigkeit=? WHERE id=?;";
 	$stmt = $db->prepare($sql);
 	$values = array($haufigkeit, $product_id);
+	return $stmt->execute($values);
+}
+
+function update_product($img, $product_name, $purchase_date, $price, $description, $product_id){
+	$db = get_db_connection();
+	$sql = "UPDATE products SET img=? product_name=? purchase_date=? price=? description=? WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	$values = array($img, $product_name, $purchase_date, $price, $description, $product_id);
 	return $stmt->execute($values);
 }
 
