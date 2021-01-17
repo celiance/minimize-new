@@ -10,7 +10,7 @@
 
 ?>
 
-  <body class="headercolor">
+  <body class="inventar">
     <section class="inventar">
         <main>
           <h2>Mein Inventar</h2>
@@ -47,5 +47,5 @@
 </section>
 </main>
 
-
+<?php $unterscheidungfooter = true ?>
 <?php include "footer.php";?>

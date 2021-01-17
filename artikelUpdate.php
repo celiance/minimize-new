@@ -3,7 +3,9 @@
 
   require_once('system/config.php');
   require_once('system/data.php');
+  $unterscheidung = true;
   include 'header.php';
+
 
 
     if(isset($_GET['product_id'])){
@@ -122,8 +124,8 @@
 ?>
 
   <!-- MAIN MAIN -->
-  <body class="artikelupdate">
-  <section class="artikelerfassen">
+  <body class="headercolor">
+  <section class="artikelupdate">
     <main>
       <h2>Artikel bearbeiten</h2>
       <p>Erstelle ein Foto deines Produktes oder lade eins hoch</p>
@@ -136,11 +138,11 @@
       <?php } ?>
       <img class="testbild" src="uploads/files/<?php echo $product['img']; ?>" alt="testbild" width="100">
       <input type="file" name="bildfile" class="file" id="file" value="uploads/files/<?php echo $product['img']; ?>"><br><br>
-      <label for="file">Bild ersetzen</label>
+      <label class="upload"for="file">Bild ersetzen</label>
 
       <input type="text" name="product_name" placeholder="Produktbezeichnung" value="<?php echo $product['product_name']; ?>" class="product_name"><br>
 
-      <input type="date" name="purchase_date"  value="<?php echo $product['purchase_date']; ?>" class="purchase_date"><br>
+      <input type="date" name="purchase_date"  style="background-color: white;" value="<?php echo $product['purchase_date']; ?>" class="purchase_date"><br>
 
       <input type="number" step="0.05" name="price" placeholder="Preis" value="<?php echo $product['price']; ?>" class="price"><br>
 
@@ -149,7 +151,8 @@
       <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
 
       <button type="submit" name="product_submit" value="erfassen">Aktualiseren</button>
-      <button type="submit" name="abbrechen" value="erfassen">Abbrechen</button>
+
+
     </form>
 
   </div>

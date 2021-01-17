@@ -1,5 +1,6 @@
 <?php
 
+  $unterscheidung = true;
   include 'header.php';
   include 'login-wall.php';
 
@@ -46,7 +47,9 @@
 
 ?>
   <!-- MAIN MAIN -->
-  <main>
+  <body class="headercolor">
+    <section class="verkaufen">
+        <main>
     <h2>Produkt verkaufen</h2>
     <!-- Bild -->
     <!-- Bild -->
@@ -86,7 +89,7 @@
       <button class="löschen" type="submit" name="">zurück zur Übersicht</button>
     </a>
   </main>
-
+<?php include 'footer.php';?>
 
   <script type="text/javascript">
       function copyTitel() {
@@ -155,6 +158,3 @@
         }
       }
   </script>
-
-
-  <?php include 'footer.php';?>

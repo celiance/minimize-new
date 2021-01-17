@@ -15,7 +15,7 @@
           <p>Brauchst du diese Produkte noch?</p>
         <?php }else{?>
           <p>Du hast aktuell keine Produkte in dieser Liste.</p>
-          <button type="button" name="button"  onclick="window.location.href='/MeinInventar.php'">Zum gesamten Inventar</button>
+          <button class="zuminventar" type="button" name="button"  onclick="window.location.href='/MeinInventar.php'">Zum gesamten Inventar</button>
         <?php  }  ?>
 
         <!--Alle Push-Produkte-->

@@ -22,22 +22,28 @@
         <main>
               <div class="menu">
                 <a href="/updateProfil.php"><p><?php echo $user['name']; ?></p></a>
-                  <a href="/updateProfil.php">
-
-                  </a>
+                <a href="/updateProfil.php">
+                  <button type="button" name="button" onclick="window.location.href='/updateProfil.php'">
+                    <i class="fas fa-arrow-right "></i>
+                  </button>
+                </a>
                 </div>
 
               <div class="menu">
                 <p><?php echo $user['email']; ?></p>
-                <a href="">
-
+                <a href="/updateProfil.php">
+                  <button type="button" name="button" onclick="window.location.href='/updateProfil.php'">
+                    <i class="fas fa-arrow-right "></i>
+                  </button>
                 </a>
               </div>
 
               <div class="menu">
-                <p>Passwort *****</p>
+                <p>Passwort</p>
                 <a href="/updateProfil.php">
-
+                  <button type="button" name="button" onclick="window.location.href='/updateProfil.php'">
+                    <i class="fas fa-arrow-right "></i>
+                  </button>
                 </a>
               </div>
 

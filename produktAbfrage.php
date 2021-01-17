@@ -1,6 +1,9 @@
 <?php
 
-  include 'header.php';
+
+  $unterscheidung = true;
+
+  include ('header.php');
   include 'login-wall.php';
 
   if(isset($_GET['product_id'])){
@@ -71,13 +74,15 @@
 
 ?>
   <!-- MAIN MAIN -->
-  <main>
-    <h2>Produkt verkaufen</h2>
+  <body class="headercolor">
+    <section class="abfrage">
+      <main>
+        <h2>Produkt verkaufen</h2>
 
     <!--Formular-->
     <p>Wie oft hast du den Artikel benutzt?</p>
     <form class="" action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-      <fieldset>
+      <fieldset class="abfrage">
         <input type="radio" name="haufigkeit" value="tag">
         <label for="nie">einmal pro Tag</label><br>
         <input type="radio" name="haufigkeit" value="woche">
@@ -88,18 +93,16 @@
         <label for="oft">fast nie</label><br>
         <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
       </fieldset>
-      <button class="löschenalert" type="submit" name="price_submit">Preis berechnen</button>
+
+      <button class="berechnen"type="submit" name="price_submit">Preis berechnen</button>
     </form>
-    <button class="löschenalert" type="button" name="button" onclick="window.location.href='/produktseite.php?product_id=<?php echo $product['id'] ?>'">Abbrechen</button>
+    <button class="abbrechenabfrage"type="button" name="button" onclick="window.location.href='/produktseite.php?product_id=<?php echo $product['id'] ?>'">Abbrechen</button>
     <!--Produkt löschen btn-->
     <form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
-      <button class="löschen" type="submit" name="delete_product">Produkt löschen</button>
+      <button class="löschenabfrage" type="submit" name="delete_product">Produkt löschen</button>
     </form>
 
+  </section>
   </main>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
+
 <?php include 'footer.php';?>

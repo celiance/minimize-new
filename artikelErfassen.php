@@ -136,11 +136,11 @@
           <p><?php echo $msg ?></p>
         <?php } ?>
         <input type="file" name="bildfile" class="file" id="file"><br><br>
-        <label for="file">Datei hochladen</label>
+        <label class="upload"for="file">Datei hochladen</label>
 
         <input type="text" name="product_name" placeholder="Produktbezeichnung" value="" class="product_name"><br>
 
-        <input type="date" name="purchase_date" placeholder="Kaufdatum"  value="" class="purchase_date"><br>
+        <input type="date" style="background-color: white;" name="purchase_date" placeholder="Kaufdatum" value="" class="purchase_date"><br>
 
 
         <input type="number" step="0.05" name="price" placeholder="Preis" value="" class="price"><br>
