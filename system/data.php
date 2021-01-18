@@ -21,16 +21,22 @@ function get_db_connection(){
 }
 
 //Login Funktion
-function login($email, $password){
-		$db = get_db_connection();
-		$sql = "SELECT * FROM user WHERE email='$email' AND password='$password';";
-		$result = $db->query($sql);
+function login($email, $password)
+{
+	$db = get_db_connection();
+	$sql = "SELECT * FROM user WHERE email='$email';";
+	$result = $db->query($sql);
 
-		if($result->rowCount() == 1){
-			$row = $result->fetch();
-			return $row;
-		}else{
-			return false;
+	if ($result->rowCount() == 1) {
+		$row = $result->fetch();
+
+		if ($row != false) {
+			if (password_verify($password, $row['password'])) {
+				return $row;
+			};
+		}
+	} else {
+		return false;
 	}
 }
 
@@ -66,6 +72,7 @@ function get_user_by_id($id){
 	$result = $db->query($sql);
 	return $result->fetch();
 }
+
 
 function product_input($img, $product_name, $purchase_date, $price, $description, $status, $owner_id){
 	$db = get_db_connection();

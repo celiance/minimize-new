@@ -27,7 +27,7 @@
     }
 
     if(!empty($_POST['password'])){
-      $password = $_POST['password'];
+      $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
     }else{
       $msg .= "Bitte gib ein Passwort ein.<br>";
       $register_valid = false;

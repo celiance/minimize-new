@@ -36,13 +36,11 @@
 
     if($login_valid){
       $result = login($email , $password);
+      var_dump($result);
 
       if($result){
-        $user = $result;
-        $_SESSION['userid'] = $user['id'];
-
+        $_SESSION['userid'] = $result['id'];
         header("Location: https://minimize.celiance.ch/home-uebersicht.php");
-
 
       }else{
         $msg = "Die Benutzerdaten sind nicht in unserer Datenbank vorhanden.";
