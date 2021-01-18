@@ -7,7 +7,6 @@
   include 'header.php';
 
 
-
     if(isset($_GET['product_id'])){
       $product_id = $_GET['product_id'];
       $product = get_product_by_id($product_id);
@@ -129,30 +128,20 @@
     <main>
       <h2>Artikel bearbeiten</h2>
       <p>Erstelle ein Foto deines Produktes oder lade eins hoch</p>
-
       <form action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
       <?php if(!empty($msg)){ ?>
-
       <div class="nachricht" role="alert">
         <p><?php echo $msg ?></p>
       <?php } ?>
       <img class="testbild" src="uploads/files/<?php echo $product['img']; ?>" alt="testbild" width="100">
       <input type="file" name="bildfile" class="file" id="file" value="uploads/files/<?php echo $product['img']; ?>"><br><br>
       <label class="upload"for="file">Bild ersetzen</label>
-
       <input type="text" name="product_name" placeholder="Produktbezeichnung" value="<?php echo $product['product_name']; ?>" class="product_name"><br>
-
       <input type="date" name="purchase_date"  style="background-color: white;" value="<?php echo $product['purchase_date']; ?>" class="purchase_date"><br>
-
       <input type="number" step="0.05" name="price" placeholder="Preis" value="<?php echo $product['price']; ?>" class="price"><br>
-
       <input type="text" name="description" value="<?php echo $product['description']; ?>" placeholder="Beschreibung" class="description"><br>
-
       <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-
       <button type="submit" name="product_submit" value="erfassen">Aktualiseren</button>
-
-
     </form>
 
   </div>

@@ -23,7 +23,8 @@
       <!--Produktanzeige-->
       <section class="">
         <main>
-              <img class="" src="uploads/files/<?php echo $product['quittung'] ?>" alt="testbild" width="90%" style="margin-left: 5%;">
+            <button class="quittung" type="button" name="button"  onclick="window.location.href='/uploadQuittung.php?product_id=<?php echo $product['id']; ?>'" style="margin-left: 5%;">Quittung ändern</button>
+            <img class="" src="uploads/files/<?php echo $product['quittung'] ?>" alt="testbild" width="90%" style="margin-left: 5%;">
       </main>
     </section>
 

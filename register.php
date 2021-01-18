@@ -2,10 +2,8 @@
 <?php
   session_start();
 
-
   require_once('system/config.php');
   require_once('system/data.php');
-
 
   $logged_in = false;
   $log_in_out_text = "Anmelden";

@@ -1,16 +1,10 @@
 <?php
   $unterscheidung = true;
-?>
-
-
-<?php
 
   include ('header.php');
   include ('login-wall.php');
 
-
   $push_products = get_product_push($user_id);
-
 
   if(isset($_GET['product_id'])){
     $product_id = $_GET['product_id'];
@@ -43,7 +37,6 @@
       <section class="produktonly">
         <main>
           <div class="produktbox">
-
               <img class="testbild" src="uploads/files/<?php echo $product['img'] ?>" alt="testbild" width="100">
               <div>
                 <h4><?php echo $product['product_name']; ?></h4>
