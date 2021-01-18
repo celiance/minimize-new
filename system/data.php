@@ -120,7 +120,7 @@ function update_haufigkeit($haufigkeit, $product_id){
 
 function update_product($img, $product_name, $purchase_date, $price, $description, $product_id){
 	$db = get_db_connection();
-	$sql = "UPDATE products SET img=? product_name=? purchase_date=? price=? description=? WHERE id=?;";
+	$sql = "UPDATE products SET img=?, product_name=?, purchase_date=?, price=?, description=? WHERE id=?;";
 	$stmt = $db->prepare($sql);
 	$values = array($img, $product_name, $purchase_date, $price, $description, $product_id);
 	return $stmt->execute($values);
