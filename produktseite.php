@@ -50,9 +50,6 @@
                 </p>
                 <h3><?php echo $product['description']; ?></h3>
               </div>
-                <button class="produktonlyedit" onclick="window.location.href='/artikelUpdate.php?product_id=<?php echo $product['id'] ?>'">
-                  <i class="fas fa-pen "></i>
-                </button>
           </div>
           <!--QUITTUNG QUITTUNG QUITTUNG-->
           <?php if($product['quittung']){?>
