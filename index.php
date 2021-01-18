@@ -15,7 +15,7 @@
 
 <body class="headercolor">
    <main class="mobile-hidden">
-     <img src="../assets/home.png">
+     <img src="../assets/landingpage_minimize.png" style="width:1500px;">
     </main>
 
     <section class="onepage desktop-hidden">
