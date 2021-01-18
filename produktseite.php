@@ -62,10 +62,11 @@
                 </button>
           </div>
           <!--QUITTUNG QUITTUNG QUITTUNG-->
-          <a href="<?php $product['quittung']; ?>">
-
-          <button class="quittung" type="button" name="button"  onclick="window.location.href='/artikelErfassen.php'">Quittung ansehen</button>
-          </a>
+          <?php if($product['quittung']){?>
+              <button class="quittung" type="button" name="button"  onclick="window.location.href='/quittung.php?product_id=<?php echo $product['id'] ?>'">Quittung ansehen</button>
+          <?php }else{?>
+            <button class="quittung" type="button" name="button"  onclick="window.location.href='/uploadQuittung.php?product_id=<?php echo $product['id']; ?>'">Quittung hochladen</button>
+            <?php } ?>
           <!--glöckli wird nur angezeigt, wenn der push aktiv ist-->
           <?php
           foreach ($push_products as $push_prod) {

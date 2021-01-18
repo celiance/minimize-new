@@ -1,21 +1,26 @@
 <?php
+  $unterscheidung = true;
+?>
+
+
+
+
+<?php
   session_start();
 
   require_once('system/config.php');
   require_once('system/data.php');
-  $unterscheidung = true;
   include 'header.php';
 
 
 
-    if(isset($_GET['product_id'])){
-      $product_id = $_GET['product_id'];
-      $product = get_product_by_id($product_id);
-      $product_id = $product['id'];
-    }else{
-      echo "hier fehlt etwas";
-    }
-
+  if(isset($_GET['product_id'])){
+    $product_id = $_GET['product_id'];
+    $product = get_product_by_id($product_id);
+    $product_id = $product['id'];
+  }else{
+    echo "hier fehlt etwas";
+  }
 
   if(isset($_POST['product_submit'])){
     $msg = "";
@@ -23,7 +28,6 @@
 
     if(isset($_FILES['bildfile'])){
       $name = $_FILES['bildfile'];
-
 
             //** DATEIUPLOAD DATEIUPLOAD **********************
             //name des uploadfelds im formular
@@ -56,37 +60,8 @@
             	}
             }
 
-
     }else{
       $msg .= "Bitte wähle ein Foto aus.<br>";
-      $product_valid = false;
-    }
-
-    if(!empty($_POST['product_name'])){
-      $product_name = $_POST['product_name'];
-    }else{
-      $msg .= "Bitte gib eine Produkbezeichnung ein.<br>";
-      $product_valid = false;
-    }
-
-    if(!empty($_POST['purchase_date'])){
-      $purchase_date = $_POST['purchase_date'];
-    }else{
-      $msg .= "Bitte gib ein Kaufdatum ein.<br>";
-      $product_valid = false;
-    }
-
-    if(!empty($_POST['price'])){
-      $price = $_POST['price'];
-    }else{
-      $msg .= "Bitte gib ein Preis ein.<br>";
-      $product_valid = false;
-    }
-
-    if(!empty($_POST['description'])){
-      $description = $_POST['description'];
-    }else{
-      $msg .= "Bitte gib eine Beschreibung ein.<br>";
       $product_valid = false;
     }
 
@@ -106,7 +81,7 @@
           }
           move_uploaded_file($_FILES[$inputname]['tmp_name'], $new_path);
 
-        $result = update_product($dateiname, $product_name, $purchase_date, $price, $description, $_POST['product_id']);
+        $result = update_quittung($dateiname, $_POST['product_id']);
 
         if($result){
           unset($_POST);
@@ -124,39 +99,27 @@
 ?>
 
   <!-- MAIN MAIN -->
-  <body class="headercolor">
-  <section class="artikelupdate">
-    <main>
-      <h2>Artikel bearbeiten</h2>
-      <p>Erstelle ein Foto deines Produktes oder lade eins hoch</p>
 
-      <form action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
-      <?php if(!empty($msg)){ ?>
+<body class="artikelerfassen">
+    <section class="artikelerfassen">
+      <main>
+        <h2>Quittung/ Garantieschein hochladen</h2>
+        <p>Erstelle ein Foto von deiner Quittung oder deinem Garantieschein.</p>
 
-      <div class="nachricht" role="alert">
-        <p><?php echo $msg ?></p>
-      <?php } ?>
-      <img class="testbild" src="uploads/files/<?php echo $product['img']; ?>" alt="testbild" width="100">
-      <input type="file" name="bildfile" class="file" id="file" value="uploads/files/<?php echo $product['img']; ?>"><br><br>
-      <label class="upload"for="file">Bild ersetzen</label>
+        <form action="<?php echo $_SERVER['PHP_SELF']?>" enctype="multipart/form-data" method="post">
+        <?php if(!empty($msg)){ ?>
 
-      <input type="text" name="product_name" placeholder="Produktbezeichnung" value="<?php echo $product['product_name']; ?>" class="product_name"><br>
+        <div class="nachricht" role="alert">
+          <p><?php echo $msg ?></p>
+        <?php } ?>
+        <input type="file" name="bildfile" class="file" id="file"><br><br>
+        <label class="upload" for="file">Datei hochladen</label>
+        <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
+        <button type="submit" name="product_submit" value="erfassen">Upload</button>
+      </form>
 
-      <input type="date" name="purchase_date"  style="background-color: white;" value="<?php echo $product['purchase_date']; ?>" class="purchase_date"><br>
-
-      <input type="number" step="0.05" name="price" placeholder="Preis" value="<?php echo $product['price']; ?>" class="price"><br>
-
-      <input type="text" name="description" value="<?php echo $product['description']; ?>" placeholder="Beschreibung" class="description"><br>
-
-      <input type="hidden" name="product_id" value="<?php echo $product_id; ?>">
-
-      <button type="submit" name="product_submit" value="erfassen">Aktualiseren</button>
-
-
-    </form>
-
-  </div>
-</section>
-</main>
+    </div>
+  </section>
+  </main>
 
 <?php include 'footer.php';?>

@@ -126,6 +126,14 @@ function update_product($img, $product_name, $purchase_date, $price, $descriptio
 	return $stmt->execute($values);
 }
 
+function update_quittung($quittung, $product_id){
+	$db = get_db_connection();
+	$sql = "UPDATE products SET quittung=? WHERE id=?;";
+	$stmt = $db->prepare($sql);
+	$values = array($quittung, $product_id);
+	return $stmt->execute($values);
+}
+
 /* DELETE BEFEHLE */
 
 function delete_profil($id){
